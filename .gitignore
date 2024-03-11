@@ -1,0 +1,4 @@
+MAPS_JWT
+*.p8
+localStorage.json
+.DS_Store

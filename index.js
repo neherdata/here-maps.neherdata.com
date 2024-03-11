@@ -29,3 +29,20 @@ map.addLayer(defaultLayers.vector.traffic.map);
 
 // Enable dynamic resizing of the map, based on the current size of the enclosing cntainer
 window.addEventListener("resize", () => map.getViewPort().resize());
+
+// add neherdata coordinates
+const neherdataCoordinates = {
+  lat: 40.3083382,
+  lng: -74.0697479,
+};
+
+// Create the HTML content for the info bubble
+const content = "<div>" + "<h3>Neher Data Systems</h3>" + '<p>Learn more at <a href="https://www.neherdata.com/" target="_blank">Neher Data Systems</a>.</p>' + "</div>";
+
+// Create an info bubble at the Neher Data Systems location with the HTML content
+const infoBubble = new H.ui.InfoBubble(neherdataCoordinates, {
+  content,
+});
+
+// Add the info bubble to the UI
+ui.addBubble(infoBubble);

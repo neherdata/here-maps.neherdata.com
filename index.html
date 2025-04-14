@@ -26,7 +26,9 @@
 
 </body>
 <footer>
-    <p>© 2024 <a href="https://legal.here.com/us-en/terms/here-end-user-terms">HERE</a> and <a
+    <p>© <span id="currentYear"></span> <script>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script> <a href="https://legal.here.com/us-en/terms/here-end-user-terms">HERE</a> and <a
             href="https://www.neherdata.com/">Neher Data Systems</a></p>
 </footer>
 
